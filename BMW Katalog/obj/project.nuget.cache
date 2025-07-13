@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "YG/dE5BZUbWfTFH1lfW9GGvBm62YhVlT4wreQEvD+4SzGnAiq+OZd1gywGA1orROxhpcNKVuxbsnxc5/QsLxeg==",
+  "success": true,
+  "projectFilePath": "D:\\BMW Katalog\\BMW-Katalog---WPF-Project\\BMW Katalog\\BMW Katalog.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Nikola\\.nuget\\packages\\materialdesigncolors\\5.2.1\\materialdesigncolors.5.2.1.nupkg.sha512",
+    "C:\\Users\\Nikola\\.nuget\\packages\\materialdesignthemes\\5.2.1\\materialdesignthemes.5.2.1.nupkg.sha512",
+    "C:\\Users\\Nikola\\.nuget\\packages\\microsoft.xaml.behaviors.wpf\\1.1.39\\microsoft.xaml.behaviors.wpf.1.1.39.nupkg.sha512"
+  ],
+  "logs": []
+}

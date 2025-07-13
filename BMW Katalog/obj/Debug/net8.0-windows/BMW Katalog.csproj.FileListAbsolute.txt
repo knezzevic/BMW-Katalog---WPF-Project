@@ -1,0 +1,28 @@
+D:\BMW Katalog\BMW-Katalog---WPF-Project\BMW Katalog\bin\Debug\net8.0-windows\BMW Katalog.exe
+D:\BMW Katalog\BMW-Katalog---WPF-Project\BMW Katalog\bin\Debug\net8.0-windows\BMW Katalog.deps.json
+D:\BMW Katalog\BMW-Katalog---WPF-Project\BMW Katalog\bin\Debug\net8.0-windows\BMW Katalog.runtimeconfig.json
+D:\BMW Katalog\BMW-Katalog---WPF-Project\BMW Katalog\bin\Debug\net8.0-windows\BMW Katalog.dll
+D:\BMW Katalog\BMW-Katalog---WPF-Project\BMW Katalog\bin\Debug\net8.0-windows\BMW Katalog.pdb
+D:\BMW Katalog\BMW-Katalog---WPF-Project\BMW Katalog\obj\Debug\net8.0-windows\MainWindow.g.cs
+D:\BMW Katalog\BMW-Katalog---WPF-Project\BMW Katalog\obj\Debug\net8.0-windows\App.g.cs
+D:\BMW Katalog\BMW-Katalog---WPF-Project\BMW Katalog\obj\Debug\net8.0-windows\BMW Katalog_MarkupCompile.cache
+D:\BMW Katalog\BMW-Katalog---WPF-Project\BMW Katalog\obj\Debug\net8.0-windows\BMW Katalog_MarkupCompile.lref
+D:\BMW Katalog\BMW-Katalog---WPF-Project\BMW Katalog\obj\Debug\net8.0-windows\MainWindow.baml
+D:\BMW Katalog\BMW-Katalog---WPF-Project\BMW Katalog\obj\Debug\net8.0-windows\BMW Katalog.g.resources
+D:\BMW Katalog\BMW-Katalog---WPF-Project\BMW Katalog\obj\Debug\net8.0-windows\BMW Katalog.GeneratedMSBuildEditorConfig.editorconfig
+D:\BMW Katalog\BMW-Katalog---WPF-Project\BMW Katalog\obj\Debug\net8.0-windows\BMW Katalog.AssemblyInfoInputs.cache
+D:\BMW Katalog\BMW-Katalog---WPF-Project\BMW Katalog\obj\Debug\net8.0-windows\BMW Katalog.AssemblyInfo.cs
+D:\BMW Katalog\BMW-Katalog---WPF-Project\BMW Katalog\obj\Debug\net8.0-windows\BMW Katalog.csproj.CoreCompileInputs.cache
+D:\BMW Katalog\BMW-Katalog---WPF-Project\BMW Katalog\obj\Debug\net8.0-windows\BMW Katalog.dll
+D:\BMW Katalog\BMW-Katalog---WPF-Project\BMW Katalog\obj\Debug\net8.0-windows\refint\BMW Katalog.dll
+D:\BMW Katalog\BMW-Katalog---WPF-Project\BMW Katalog\obj\Debug\net8.0-windows\BMW Katalog.pdb
+D:\BMW Katalog\BMW-Katalog---WPF-Project\BMW Katalog\obj\Debug\net8.0-windows\BMW Katalog.genruntimeconfig.cache
+D:\BMW Katalog\BMW-Katalog---WPF-Project\BMW Katalog\obj\Debug\net8.0-windows\ref\BMW Katalog.dll
+D:\BMW Katalog\BMW-Katalog---WPF-Project\BMW Katalog\obj\Debug\net8.0-windows\View\LoginUser.g.cs
+D:\BMW Katalog\BMW-Katalog---WPF-Project\BMW Katalog\obj\Debug\net8.0-windows\View\LoginUser.baml
+D:\BMW Katalog\BMW-Katalog---WPF-Project\BMW Katalog\obj\Debug\net8.0-windows\BMW Katalog.csproj.AssemblyReference.cache
+D:\BMW Katalog\BMW-Katalog---WPF-Project\BMW Katalog\bin\Debug\net8.0-windows\MaterialDesignColors.dll
+D:\BMW Katalog\BMW-Katalog---WPF-Project\BMW Katalog\bin\Debug\net8.0-windows\MaterialDesignThemes.Wpf.dll
+D:\BMW Katalog\BMW-Katalog---WPF-Project\BMW Katalog\bin\Debug\net8.0-windows\Microsoft.Xaml.Behaviors.dll
+D:\BMW Katalog\BMW-Katalog---WPF-Project\BMW Katalog\obj\Debug\net8.0-windows\App.baml
+D:\BMW Katalog\BMW-Katalog---WPF-Project\BMW Katalog\obj\Debug\net8.0-windows\BMW Kata.C6E86B4F.Up2Date
