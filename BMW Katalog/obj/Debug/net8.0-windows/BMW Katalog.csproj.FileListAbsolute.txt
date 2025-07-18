@@ -26,3 +26,4 @@ D:\BMW Katalog\BMW-Katalog---WPF-Project\BMW Katalog\bin\Debug\net8.0-windows\Ma
 D:\BMW Katalog\BMW-Katalog---WPF-Project\BMW Katalog\bin\Debug\net8.0-windows\Microsoft.Xaml.Behaviors.dll
 D:\BMW Katalog\BMW-Katalog---WPF-Project\BMW Katalog\obj\Debug\net8.0-windows\App.baml
 D:\BMW Katalog\BMW-Katalog---WPF-Project\BMW Katalog\obj\Debug\net8.0-windows\BMW Kata.C6E86B4F.Up2Date
+D:\BMW Katalog\BMW-Katalog---WPF-Project\BMW Katalog\obj\Debug\net8.0-windows\BMW Katalog.sourcelink.json

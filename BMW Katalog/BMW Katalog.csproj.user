@@ -10,12 +10,18 @@
     <Compile Update="View\LoginUser.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="View\Pages\DataGridPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Page Update="MainWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="View\LoginUser.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\Pages\DataGridPage.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

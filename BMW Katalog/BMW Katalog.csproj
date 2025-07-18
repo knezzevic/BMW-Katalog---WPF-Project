@@ -11,7 +11,7 @@
 
   <ItemGroup>
     <Folder Include="Assets\" />
-    <Folder Include="Model\" />
+    <Folder Include="Helpers\" />
     <Folder Include="ViewModel\" />
   </ItemGroup>
 
