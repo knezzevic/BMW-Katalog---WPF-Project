@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
 D:\BMW Katalog\BMW-Katalog---WPF-Project\BMW Katalog\App.xaml
-2-71336287
+41917093287
 
-8-852868625
+14420486924
 2012086760956
-MainWindow.xaml;View\LoginUser.xaml;
+MainWindow.xaml;View\LoginUser.xaml;View\Pages\AddPage.xaml;View\Pages\DataGridPage.xaml;
 
 False
 

@@ -10,7 +10,13 @@
     <Compile Update="View\LoginUser.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="View\Pages\AddPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="View\Pages\DataGridPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\Preview.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
@@ -21,7 +27,13 @@
     <Page Update="View\LoginUser.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="View\Pages\AddPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="View\Pages\DataGridPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\Preview.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

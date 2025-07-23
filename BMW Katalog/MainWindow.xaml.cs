@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using System.Collections.ObjectModel;
+using System.Text;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -8,21 +9,32 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using BMW_Katalog.Model;
 using BMW_Katalog.View;
+using BMW_Katalog.View.Pages;
+using BMWKatalog.Helpers;
 
 namespace BMW_Katalog
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
+    
+
     public partial class MainWindow : Window
     {
         private User _loggedUser;
+        DataGridPage _dataGridPage {  get; set; }
+        AddPage _addPage { get; set; }
         public MainWindow(User loggedUser)
         {
             InitializeComponent();
             _loggedUser = loggedUser;
             SetUserProfile(_loggedUser);
+            _dataGridPage = new DataGridPage();
+            _addPage = new AddPage();
+            Frame.Navigated += (s, e) => btnColorAndFunction();
+            Frame.Content = _dataGridPage;
         }
 
         private void Window_MouseDown(object sender, MouseButtonEventArgs e)
@@ -60,12 +72,13 @@ namespace BMW_Katalog
 
         private void btnAdd_Click(object sender, RoutedEventArgs e)
         {
-
+            Frame.Content = _addPage;
+            
         }
 
         private void btnRemove_Click(object sender, RoutedEventArgs e)
         {
-
+            _dataGridPage.DeleteSelectedCars();
         }
 
         private void btnEdit_Click(object sender, RoutedEventArgs e)
@@ -78,6 +91,26 @@ namespace BMW_Katalog
             LoginUser lgu = new LoginUser();
             lgu.Show();
             this.Close();
+        }
+
+        private void btnBack_Click(object sender, RoutedEventArgs e)
+        {
+           
+            Frame.Content = _dataGridPage;
+        }
+
+        private void btnColorAndFunction()
+        {
+            if (Frame.Content is AddPage addPage)
+            {
+                btnBack.Foreground = new SolidColorBrush(Colors.White);
+                btnBack.IsEnabled = true;
+            }
+            else
+            {
+                btnBack.Foreground = new SolidColorBrush(Colors.Gray);
+                btnBack.IsEnabled = false;
+            }
         }
     }
 }

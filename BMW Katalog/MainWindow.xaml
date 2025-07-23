@@ -106,8 +106,12 @@
             <StackPanel Grid.Column="1" Grid.Row="0" VerticalAlignment="Bottom" Orientation="Horizontal" Margin="20 0 0 0">
                 <Image Source="D:\BMW Katalog\BMW-Katalog---WPF-Project\BMW Katalog\Assets\logo.png" Height="40" Width="40" Grid.Row="0" Grid.Column="1" Margin="10 0 0 0"/>
                 <TextBlock Text="BMW Katalog" Foreground="White" Margin="10" FontSize="42" FontWeight="SemiBold" FontFamily="Montseratt"/>
+                <Button HorizontalAlignment="Right" Margin="440 0 0 0" Background="Transparent" Width="60" Height="40" x:Name="btnBack" Click="btnBack_Click" BorderBrush="Transparent">
+                    <materialDesign:PackIcon Kind="ArrowBack" Width="40" Height="40" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                </Button>
             </StackPanel>
 
+            <Frame Grid.Column="1" Grid.Row="1" x:Name="Frame" NavigationUIVisibility="Hidden"/>
         </Grid>
     </Grid>
 </Window>

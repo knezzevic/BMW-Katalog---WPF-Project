@@ -9,10 +9,88 @@
       Title="DataGridPage">
 
     <Grid>
-        <DataGrid Background="Black" Foreground="White" x:Name="BMWDataGrid" ScrollViewer.CanContentScroll="True" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto" >
-            <DataGrid.Columns>
-                
-            </DataGrid.Columns>
-        </DataGrid>
+        <Border CornerRadius="15" BorderThickness="1" BorderBrush="Black" ClipToBounds="True" Background="Black" Margin="20">
+            <DataGrid x:Name="BMWDataGrid" Foreground="White" Background="#121212" ScrollViewer.CanContentScroll="True" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto" IsReadOnly="True" AutoGenerateColumns="False" Margin="5" ItemsSource="{Binding ListOfCars}">
+                <DataGrid.ColumnHeaderStyle>
+                    <Style TargetType="DataGridColumnHeader">
+                        <Setter Property="Foreground" Value="White"/>
+                        <Setter Property="FontWeight" Value="SemiBold"/>
+                        <Setter Property="Background" Value="black"/>
+                        <Setter Property="FontSize" Value="22"/>
+                        <Setter Property="Padding" Value="10"/>
+                        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                    </Style>
+                </DataGrid.ColumnHeaderStyle>
+                <DataGrid.Columns>
+                    <DataGridHyperlinkColumn Header="Name" Binding="{Binding Name}">
+                        <DataGridHyperlinkColumn.ElementStyle>
+                            <Style TargetType="TextBlock">
+                                <Setter Property="HorizontalAlignment" Value="Center"/>
+                                <Setter Property="TextAlignment" Value="Center"/>
+                                <Setter Property="FontSize" Value="20"/>
+                                <Setter Property="Margin" Value="10"/>
+                                <Setter Property="FontFamily" Value="Montseratt"/>
+                            </Style>
+                        </DataGridHyperlinkColumn.ElementStyle>
+                    </DataGridHyperlinkColumn>
+                    <DataGridTextColumn Header="Realse Date" Binding="{Binding RealseDate}" FontSize="20">
+                        <DataGridTextColumn.ElementStyle>
+                            <Style TargetType="TextBlock">
+                                <Setter Property="HorizontalAlignment" Value="Center"/>
+                                <Setter Property="Margin" Value="10"/>
+                                <Setter Property="FontFamily" Value="Montseratt"/>
+                            </Style>
+                        </DataGridTextColumn.ElementStyle>
+                    </DataGridTextColumn>
+                    <DataGridTemplateColumn Header="Image">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Border BorderThickness="3" CornerRadius="10" Width="100" Height="60">
+                                    <Border.BorderBrush>
+                                        <LinearGradientBrush StartPoint="0, 0" EndPoint="1, 1">
+                                            <GradientStop Color="#0066B1" Offset="0"/>
+                                            <GradientStop Color="#003C78" Offset="0.5"/>
+                                            <GradientStop Color="#E22718" Offset="1"/>
+                                        </LinearGradientBrush>
+                                    </Border.BorderBrush>
+                                    <Grid>
+                                    <Image Source="{Binding UrlImg}" 
+                                       Stretch="Fill"
+                                       HorizontalAlignment="Center" 
+                                       VerticalAlignment="Center" />
+
+                                        <Border BorderThickness="3" CornerRadius="10" Width="100" Height="60" Background="Transparent" Margin="-10">
+                                            <Border.BorderBrush>
+                                                <LinearGradientBrush StartPoint="0, 0" EndPoint="1, 1">
+                                                    <GradientStop Color="#0066B1" Offset="0"/>
+                                                    <GradientStop Color="#003C78" Offset="0.5"/>
+                                                    <GradientStop Color="#E22718" Offset="1"/>
+                                                </LinearGradientBrush>
+                                            </Border.BorderBrush>
+                                        </Border>
+                                    </Grid>
+                                </Border>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                    <DataGridTextColumn Header="Date" Binding="{Binding Date}" FontSize="20">
+                        <DataGridTextColumn.ElementStyle>
+                            <Style TargetType="TextBlock">
+                                <Setter Property="HorizontalAlignment" Value="Center"/>
+                                <Setter Property="Margin" Value="10"/>
+                                <Setter Property="FontFamily" Value="Montseratt"/>
+                            </Style>
+                        </DataGridTextColumn.ElementStyle>
+                    </DataGridTextColumn>
+                    <DataGridTemplateColumn Header="Select">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <CheckBox IsChecked="{Binding CheckBox, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+        </Border>
     </Grid>
 </Page>
