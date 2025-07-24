@@ -14,7 +14,7 @@
     <RealseDate>2020</RealseDate>
     <UrlImg>D:\BMW Katalog\BMW-Katalog---WPF-Project\BMW Katalog\Assets\bmw340i.jpg</UrlImg>
     <UrlRtf>../../../RTFs/BMW 340ii.rtf</UrlRtf>
-    <CheckBox>true</CheckBox>
+    <CheckBox>false</CheckBox>
   </Cars>
   <Cars>
     <Date>24.07.2025</Date>

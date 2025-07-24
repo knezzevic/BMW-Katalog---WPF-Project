@@ -106,7 +106,8 @@
             <StackPanel Grid.Column="1" Grid.Row="0" VerticalAlignment="Bottom" Orientation="Horizontal" Margin="20 0 0 0">
                 <Image Source="\Assets\logo.png" Height="40" Width="40" Grid.Row="0" Grid.Column="1" Margin="10 0 0 0"/>
                 <TextBlock Text="BMW Katalog" Foreground="White" Margin="10" FontSize="42" FontWeight="SemiBold" FontFamily="Montserrat"/>
-                <Button HorizontalAlignment="Right" Margin="400 0 0 0" Background="Transparent" Width="60" Height="40" x:Name="btnBack" Click="btnBack_Click" BorderBrush="Transparent">
+                <CheckBox HorizontalAlignment="Right" Margin="300 0 0 0" x:Name="SelectAllCheckBox" Content="Select All" Click="SelectAllCheckBox_Click"/>
+                <Button HorizontalAlignment="Right" Margin="0 0 0 0" Background="Transparent" Width="60" Height="40" x:Name="btnBack" Click="btnBack_Click" BorderBrush="Transparent">
                     <materialDesign:PackIcon Kind="ArrowBack" Width="40" Height="40" VerticalAlignment="Center" HorizontalAlignment="Center"/>
                 </Button>
             </StackPanel>

@@ -16,6 +16,7 @@ using BMW_Katalog.Model;
 using BMW_Katalog.View;
 using BMW_Katalog.View.Pages;
 using BMWKatalog.Helpers;
+using static MaterialDesignThemes.Wpf.Theme;
 
 namespace BMW_Katalog
 {
@@ -184,6 +185,7 @@ namespace BMW_Katalog
                 Frame.GoBack();
             else
                 Frame.Content = new DataGridPage(ListOfCars);
+            
         }
 
         private void btnColorAndFunction()
@@ -197,6 +199,24 @@ namespace BMW_Katalog
             {
                 btnBack.Foreground = new SolidColorBrush(Colors.Gray);
                 btnBack.IsEnabled = false;
+            }
+        }
+
+        private void SelectAllCheckBox_Click(object sender, RoutedEventArgs e)
+        {
+            if(SelectAllCheckBox.IsChecked == true)
+            {
+                foreach(var car in ListOfCars)
+                {
+                    car.CheckBox = true;
+                }
+            }
+            else
+            {
+                foreach (var car in ListOfCars)
+                {
+                    car.CheckBox = false;
+                }
             }
         }
     }

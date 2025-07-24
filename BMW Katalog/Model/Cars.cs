@@ -18,6 +18,7 @@ public class Cars : INotifyPropertyChanged
         UrlImg = urlImg;
         UrlRtf = urlRtf;
         Date = DateTime.Now.ToString("dd.MM.yyyy");
+        checkBox = false;
     }
 
     public string Name

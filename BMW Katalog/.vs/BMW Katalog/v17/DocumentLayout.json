@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "D:\\BMW Katalog\\BMW-Katalog---WPF-Project\\BMW Katalog\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{759AFF6E-5070-4879-83FB-17784701BEFA}|BMW Katalog.csproj|d:\\bmw katalog\\bmw-katalog---wpf-project\\bmw katalog\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{759AFF6E-5070-4879-83FB-17784701BEFA}|BMW Katalog.csproj|solutionrelative:mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{759AFF6E-5070-4879-83FB-17784701BEFA}|BMW Katalog.csproj|d:\\bmw katalog\\bmw-katalog---wpf-project\\bmw katalog\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{759AFF6E-5070-4879-83FB-17784701BEFA}|BMW Katalog.csproj|solutionrelative:mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{759AFF6E-5070-4879-83FB-17784701BEFA}|BMW Katalog.csproj|d:\\bmw katalog\\bmw-katalog---wpf-project\\bmw katalog\\model\\cars.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{759AFF6E-5070-4879-83FB-17784701BEFA}|BMW Katalog.csproj|solutionrelative:model\\cars.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -21,14 +29,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{759AFF6E-5070-4879-83FB-17784701BEFA}|BMW Katalog.csproj|d:\\bmw katalog\\bmw-katalog---wpf-project\\bmw katalog\\cars.xml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
       "RelativeMoniker": "D:0:0:{759AFF6E-5070-4879-83FB-17784701BEFA}|BMW Katalog.csproj|solutionrelative:cars.xml||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{759AFF6E-5070-4879-83FB-17784701BEFA}|BMW Katalog.csproj|d:\\bmw katalog\\bmw-katalog---wpf-project\\bmw katalog\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{759AFF6E-5070-4879-83FB-17784701BEFA}|BMW Katalog.csproj|solutionrelative:mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{759AFF6E-5070-4879-83FB-17784701BEFA}|BMW Katalog.csproj|d:\\bmw katalog\\bmw-katalog---wpf-project\\bmw katalog\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{759AFF6E-5070-4879-83FB-17784701BEFA}|BMW Katalog.csproj|solutionrelative:mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{759AFF6E-5070-4879-83FB-17784701BEFA}|BMW Katalog.csproj|d:\\bmw katalog\\bmw-katalog---wpf-project\\bmw katalog\\view\\loginuser.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
@@ -94,11 +94,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 1,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "D:\\BMW Katalog\\BMW-Katalog---WPF-Project\\BMW Katalog\\MainWindow.xaml",
               "RelativeDocumentMoniker": "MainWindow.xaml",
@@ -110,7 +110,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "EditPage.xaml.cs",
               "DocumentMoniker": "D:\\BMW Katalog\\BMW-Katalog---WPF-Project\\BMW Katalog\\View\\Pages\\EditPage.xaml.cs",
               "RelativeDocumentMoniker": "View\\Pages\\EditPage.xaml.cs",
@@ -118,8 +118,7 @@
               "RelativeToolTip": "View\\Pages\\EditPage.xaml.cs",
               "ViewState": "AQIAALIAAAAAAAAAAAAewLUAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-23T13:31:30.947Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-23T13:31:30.947Z"
             },
             {
               "$type": "Document",
@@ -131,12 +130,11 @@
               "RelativeToolTip": "View\\LoginUser.xaml.cs",
               "ViewState": "AQIAABYAAAAAAAAAAAAxwBsAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-13T11:58:38.529Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-13T11:58:38.529Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "AddPage.xaml.cs",
               "DocumentMoniker": "D:\\BMW Katalog\\BMW-Katalog---WPF-Project\\BMW Katalog\\View\\Pages\\AddPage.xaml.cs",
               "RelativeDocumentMoniker": "View\\Pages\\AddPage.xaml.cs",
@@ -144,12 +142,11 @@
               "RelativeToolTip": "View\\Pages\\AddPage.xaml.cs",
               "ViewState": "AQIAAMkAAAAAAAAAAAAswNUAAABQAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-22T12:39:55.684Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-22T12:39:55.684Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "DataGridPage.xaml.cs",
               "DocumentMoniker": "D:\\BMW Katalog\\BMW-Katalog---WPF-Project\\BMW Katalog\\View\\Pages\\DataGridPage.xaml.cs",
               "RelativeDocumentMoniker": "View\\Pages\\DataGridPage.xaml.cs",
@@ -157,18 +154,17 @@
               "RelativeToolTip": "View\\Pages\\DataGridPage.xaml.cs",
               "ViewState": "AQIAAFsAAAAAAAAAAAAAwBEAAAAfAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-19T08:56:57.546Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-19T08:56:57.546Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "Cars.cs",
               "DocumentMoniker": "D:\\BMW Katalog\\BMW-Katalog---WPF-Project\\BMW Katalog\\Model\\Cars.cs",
               "RelativeDocumentMoniker": "Model\\Cars.cs",
               "ToolTip": "D:\\BMW Katalog\\BMW-Katalog---WPF-Project\\BMW Katalog\\Model\\Cars.cs",
               "RelativeToolTip": "Model\\Cars.cs",
-              "ViewState": "AQIAACUAAAAAAAAAAAArwC0AAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAAWAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-19T08:52:35.481Z",
               "EditorCaption": ""
@@ -182,18 +178,17 @@
               "ToolTip": "D:\\BMW Katalog\\BMW-Katalog---WPF-Project\\BMW Katalog\\View\\Preview.xaml",
               "RelativeToolTip": "View\\Preview.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-07-23T08:54:02.536Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-23T08:54:02.536Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 0,
               "Title": "MainWindow.xaml.cs",
               "DocumentMoniker": "D:\\BMW Katalog\\BMW-Katalog---WPF-Project\\BMW Katalog\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "MainWindow.xaml.cs",
               "ToolTip": "D:\\BMW Katalog\\BMW-Katalog---WPF-Project\\BMW Katalog\\MainWindow.xaml.cs",
               "RelativeToolTip": "MainWindow.xaml.cs",
-              "ViewState": "AQIAADEAAAAAAAAAAAAcwHUAAABmAAAA",
+              "ViewState": "AQIAAMQAAAAAAAAAAAAiwNkAAAAoAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-07-16T14:48:40.037Z",
               "EditorCaption": ""
@@ -207,8 +202,7 @@
               "ToolTip": "D:\\BMW Katalog\\BMW-Katalog---WPF-Project\\BMW Katalog\\View\\LoginUser.xaml",
               "RelativeToolTip": "View\\LoginUser.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-07-18T14:03:33.893Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-18T14:03:33.893Z"
             },
             {
               "$type": "Document",
@@ -219,12 +213,11 @@
               "ToolTip": "D:\\BMW Katalog\\BMW-Katalog---WPF-Project\\BMW Katalog\\View\\Pages\\EditPage.xaml",
               "RelativeToolTip": "View\\Pages\\EditPage.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-07-23T12:17:52.635Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-23T12:17:52.635Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "Cars.xml",
               "DocumentMoniker": "D:\\BMW Katalog\\BMW-Katalog---WPF-Project\\BMW Katalog\\Cars.xml",
               "RelativeDocumentMoniker": "Cars.xml",
@@ -232,8 +225,7 @@
               "RelativeToolTip": "Cars.xml",
               "ViewState": "AQIAAAEAAAAAAAAAAAAAAAcAAAA4AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003576|",
-              "WhenOpened": "2025-07-24T10:10:39.04Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-24T10:10:39.04Z"
             },
             {
               "$type": "Document",
@@ -245,8 +237,7 @@
               "RelativeToolTip": "View\\Preview.xaml.cs",
               "ViewState": "AQIAAB8AAAAAAAAAAADwvzkAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-23T08:54:19.768Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-07-23T08:54:19.768Z"
             },
             {
               "$type": "Document",
@@ -292,7 +283,8 @@
               "ToolTip": "D:\\BMW Katalog\\BMW-Katalog---WPF-Project\\BMW Katalog\\View\\Pages\\DataGridPage.xaml",
               "RelativeToolTip": "View\\Pages\\DataGridPage.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-07-18T19:08:51.255Z"
+              "WhenOpened": "2025-07-18T19:08:51.255Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
