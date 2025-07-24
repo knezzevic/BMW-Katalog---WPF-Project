@@ -51,13 +51,13 @@
                     <Border Width="100" Height="100" Padding="3" Background="White" CornerRadius="100" DockPanel.Dock="Top" HorizontalAlignment="Left" Margin="20 -35 0 0">
                         <Ellipse x:Name="Pfp">
                             <Ellipse.Fill>
-                                <ImageBrush ImageSource="D:\BMW Katalog\BMW-Katalog---WPF-Project\BMW Katalog\Assets\filip.jpeg"/>
+                                <ImageBrush ImageSource="\Assets\filip.jpeg"/>
                             </Ellipse.Fill>
                         </Ellipse>
                     </Border>
 
-                    <TextBlock  Foreground="White" FontSize="40" FontWeight="SemiBold" FontFamily="Montseratt" Margin="20 15 0 0" TextAlignment="Left" DockPanel.Dock="Top" x:Name="FullNameUser"/>
-                    <TextBlock  Foreground="Gray" FontSize="20" FontWeight="Regular" FontFamily="Montseratt" Margin="20 0 0 10" TextAlignment="Left" DockPanel.Dock="Top" x:Name="UsernameUser"/>
+                    <TextBlock  Foreground="White" FontSize="36" FontWeight="SemiBold" FontFamily="Montserrat" Margin="20 15 0 0" TextAlignment="Left" DockPanel.Dock="Top" x:Name="FullNameUser"/>
+                    <TextBlock  Foreground="Gray" FontSize="20" FontWeight="Regular" FontFamily="Montserrat" Margin="20 0 0 10" TextAlignment="Left" DockPanel.Dock="Top" x:Name="UsernameUser"/>
 
                     <Separator Margin='25 5 25 25' DockPanel.Dock="Top" Height="0.8" Background="White"/>
 
@@ -73,7 +73,7 @@
 
                             <StackPanel Orientation="Horizontal">
                                 <materialDesign:PackIcon Kind="Add" Width="30" Height="30" Foreground="White"/>
-                                <TextBlock Text="Add" VerticalAlignment="Center" Margin="5 0 0 0"/>
+                                <TextBlock Text="Add" VerticalAlignment="Center" Margin="5 0 0 0" FontFamily="Montserrat"/>
                             </StackPanel>
 
                         </Button>
@@ -81,14 +81,14 @@
                         <Button Height="60" Width="270" Foreground="White" FontSize="20" BorderBrush="Transparent" Style="{StaticResource MaterialDesignRaisedButton}" materialDesign:ButtonAssist.CornerRadius="10" Margin="0 0 0 10" Background="#E22718" x:Name="btnRemove" Click="btnRemove_Click">
                             <StackPanel Orientation="Horizontal">
                                 <materialDesign:PackIcon Kind="Remove" Width="30" Height="30" Foreground="White"/>
-                                <TextBlock Text="Remove" VerticalAlignment="Center" Margin="5 0 0 0"/>
+                                <TextBlock Text="Remove" VerticalAlignment="Center" Margin="5 0 0 0" FontFamily="Montserrat"/>
                             </StackPanel>
                         </Button>
 
                         <Button Height="60" Width="270" Foreground="White" FontSize="20" BorderBrush="Transparent" Style="{StaticResource MaterialDesignRaisedButton}" materialDesign:ButtonAssist.CornerRadius="10" Margin="0 0 0 10" Background="#0066B1" x:Name="btnEdit" Click="btnEdit_Click">
                             <StackPanel Orientation="Horizontal">
                                 <materialDesign:PackIcon Kind="Edit" Width="30" Height="30" Foreground="White"/>
-                                <TextBlock Text="Edit" VerticalAlignment="Center" Margin="5 0 0 0"/>
+                                <TextBlock Text="Edit" VerticalAlignment="Center" Margin="5 0 0 0" FontFamily="Montserrat"/>
                             </StackPanel>
                         </Button>
 
@@ -97,16 +97,16 @@
                     <Button DockPanel.Dock="Bottom" VerticalAlignment="Bottom" Height="60" Width="270" Margin="15 15 15 15" FontSize="20" Foreground="black" Background="White" Style="{StaticResource MaterialDesignRaisedButton}" materialDesign:ButtonAssist.CornerRadius="10" x:Name="btnLogOut" Click="btnLogOut_Click" BorderBrush="Transparent">
                         <StackPanel Orientation="Horizontal">
                             <materialDesign:PackIcon Kind="Logout" Width="30" Height="30" Foreground="Black"/>
-                            <TextBlock Text="Log Out" VerticalAlignment="Center" Margin="5 0 0 0"/>
+                            <TextBlock Text="Log Out" VerticalAlignment="Center" Margin="5 0 0 0" FontFamily="Montserrat"/>
                         </StackPanel>
                     </Button>
                 </DockPanel>
             </Border>
 
             <StackPanel Grid.Column="1" Grid.Row="0" VerticalAlignment="Bottom" Orientation="Horizontal" Margin="20 0 0 0">
-                <Image Source="D:\BMW Katalog\BMW-Katalog---WPF-Project\BMW Katalog\Assets\logo.png" Height="40" Width="40" Grid.Row="0" Grid.Column="1" Margin="10 0 0 0"/>
-                <TextBlock Text="BMW Katalog" Foreground="White" Margin="10" FontSize="42" FontWeight="SemiBold" FontFamily="Montseratt"/>
-                <Button HorizontalAlignment="Right" Margin="440 0 0 0" Background="Transparent" Width="60" Height="40" x:Name="btnBack" Click="btnBack_Click" BorderBrush="Transparent">
+                <Image Source="\Assets\logo.png" Height="40" Width="40" Grid.Row="0" Grid.Column="1" Margin="10 0 0 0"/>
+                <TextBlock Text="BMW Katalog" Foreground="White" Margin="10" FontSize="42" FontWeight="SemiBold" FontFamily="Montserrat"/>
+                <Button HorizontalAlignment="Right" Margin="400 0 0 0" Background="Transparent" Width="60" Height="40" x:Name="btnBack" Click="btnBack_Click" BorderBrush="Transparent">
                     <materialDesign:PackIcon Kind="ArrowBack" Width="40" Height="40" VerticalAlignment="Center" HorizontalAlignment="Center"/>
                 </Button>
             </StackPanel>

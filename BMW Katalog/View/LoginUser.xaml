@@ -18,7 +18,7 @@
     <Grid>
         <Border CornerRadius="30">
         <Border.Background>
-            <ImageBrush ImageSource="D:\BMW Katalog\BMW-Katalog---WPF-Project\BMW Katalog\Assets\bg.jpg" Stretch="Fill"/>
+            <ImageBrush ImageSource="\Assets\bg.jpg" Stretch="Fill"/>
         </Border.Background>
         
         <Border CornerRadius="30" Opacity="0.93" BorderThickness="5">
@@ -53,22 +53,22 @@
 
             <StackPanel>
                 <StackPanel Margin="20 20">
-                    <Image Source="D:\BMW Katalog\BMW-Katalog---WPF-Project\BMW Katalog\Assets\logo.png" Height="50" Width="50" Margin="10"/>
+                    <Image Source="\Assets\logo.png" Height="50" Width="50" Margin="10"/>
                     <TextBlock Text="User Login" FontSize="36" TextAlignment="Center" Foreground="White" FontFamily="Montserrat" FontWeight="Bold"/>
                 </StackPanel>
 
                 <StackPanel Orientation="Horizontal" Margin="30" HorizontalAlignment="Center" VerticalAlignment="Center" Width="400">
                     <materialDesign:PackIcon Kind="User" Width="40" Height="40" Foreground="White"/>
-                    <TextBox x:Name="txtUsername" Margin="15 0" materialDesign:HintAssist.Hint="Unesi korisnicko ime" Foreground="white" FontSize="18" Width="350" SelectionBrush="#003C78" CaretBrush="#0066B1"/>
+                    <TextBox x:Name="txtUsername" Margin="15 0" materialDesign:HintAssist.Hint="Unesi korisnicko ime" Foreground="white" FontSize="18" Width="350" SelectionBrush="#003C78" CaretBrush="#0066B1" FontFamily="Montserrat"/>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" Margin="30 0" HorizontalAlignment="Center" VerticalAlignment="Center" Width="400">
                     <materialDesign:PackIcon Kind="Lock" Width="40" Height="40" Foreground="White"/>
-                    <PasswordBox x:Name="txtPassword" Margin="15 0" materialDesign:HintAssist.Hint="Unesi lozinku" Foreground="white" FontSize="18" Width="350" KeyDown="txtPassword_KeyDown"/>
+                    <PasswordBox x:Name="txtPassword" Margin="15 0" materialDesign:HintAssist.Hint="Unesi lozinku" Foreground="white" FontSize="18" Width="350" KeyDown="txtPassword_KeyDown" FontFamily="Montserrat"/>
                 </StackPanel>
 
                 <StackPanel Margin="50 30" HorizontalAlignment="Center" Orientation="Horizontal">
                     <Button Width="170" Height="60" Content="Login" Style="{StaticResource MaterialDesignRaisedButton}"
-                            materialDesign:ButtonAssist.CornerRadius="20" BorderBrush="Transparent" Foreground="White" x:Name="btnLogin" Click="btnLogin_Click" FontSize="20">
+                            materialDesign:ButtonAssist.CornerRadius="20" BorderBrush="Transparent" Foreground="White" x:Name="btnLogin" Click="btnLogin_Click" FontSize="20" FontFamily="Montserrat">
                         <Button.Background>
                             <LinearGradientBrush StartPoint="0, 0" EndPoint="1, 1">
                                 <GradientStop Color="#0066B1" Offset="0"/> 
@@ -79,7 +79,7 @@
 
                     </Button>
                     <Button Width="170" Height="60" Background="#E22718"
-ToolTip="Close" x:Name="btnClose" Click="btnClose_Click" BorderBrush="Transparent" Content="Exit" Foreground="White" materialDesign:ButtonAssist.CornerRadius="20" FontSize="20" Margin="20 0 0 0">
+ToolTip="Close" x:Name="btnClose" Click="btnClose_Click" BorderBrush="Transparent" Content="Exit" Foreground="White" materialDesign:ButtonAssist.CornerRadius="20" FontSize="20" Margin="20 0 0 0" FontFamily="Montserrat">
 
                     </Button>
 

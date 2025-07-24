@@ -40,5 +40,40 @@ namespace BMW_Katalog.Helpers
             }
         }
 
+        public static List<Cars> UcitajAute()
+        {
+            if (!File.Exists(xmlPath))
+                return new List<Cars>();
+
+            XmlSerializer serializer = new XmlSerializer(typeof(List<Cars>));
+            using (FileStream fs = new FileStream(xmlPath, FileMode.Open))
+            {
+                return (List<Cars>)serializer.Deserialize(fs);
+            }
+        }
+
+        public static string SanitizeFileName(string fileName)
+        {
+            if (string.IsNullOrWhiteSpace(fileName))
+            {
+                return "Untitled"; // Povratite podrazumevano ime ako je prazno
+            }
+
+            // Uklonite nedozvoljene karaktere za nazive fajlova
+            string invalidChars = new string(Path.GetInvalidFileNameChars());
+            string sanitizedName = new string(fileName.Where(c => !invalidChars.Contains(c)).ToArray());
+
+            // Takođe zamenite razmake sa podvlakama ili crticama radi bolje kompatibilnosti putanje
+            sanitizedName = sanitizedName.Replace(" ", "_");
+
+            // Obezbedite da naziv nije prazan nakon saniranja
+            if (string.IsNullOrWhiteSpace(sanitizedName))
+            {
+                return "Untitled";
+            }
+
+            return sanitizedName;
+        }
+
     }
 }

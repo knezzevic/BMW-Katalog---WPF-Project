@@ -1,53 +1,57 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Xml.Serialization;
+﻿using System.ComponentModel;
 
-namespace BMW_Katalog.Model
+public class Cars : INotifyPropertyChanged
 {
-    [XmlRoot("Cars")]
-    public class Cars : INotifyPropertyChanged
+    private string name;
+    private int realseDate;
+    private string urlImg;
+    private string urlRtf;
+    private bool checkBox;
+    public string Date {  get; set; }
+
+    public Cars() { }
+
+    public Cars(string name, int realseDate, string urlImg, string urlRtf)
     {
-        public List<Cars> Car { get; set; } = new List<Cars>();
-        public string Name {  get; set; }
-        public int RealseDate {  get; set; }
-        public string UrlImg {  get; set; }
-        public string UrlRtf {  get; set; }
-        public string Date { get; set; }
-
-        private bool _checkBox;
-        public bool CheckBox
-        {
-            get => _checkBox;
-            set
-            {
-                if (_checkBox != value)
-                {
-                    _checkBox = value;
-                    OnPropertyChanged(nameof(CheckBox));
-                }
-            }
-        }
-
-        public Cars() { }
-
-        public Cars(string name, int realseDate, string urlImg, string urlRtf)
-        {
-            Name = name;
-            RealseDate = realseDate;
-            UrlImg = urlImg;
-            UrlRtf = urlRtf;
-            Date = DateTime.Now.ToString("dd.MM.yyyy");
-            //CheckBox = checkBox;
-        }
-
-        public event PropertyChangedEventHandler PropertyChanged;
-        protected void OnPropertyChanged(string name)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
-        }
+        Name = name;
+        RealseDate = realseDate;
+        UrlImg = urlImg;
+        UrlRtf = urlRtf;
+        Date = DateTime.Now.ToString("dd.MM.yyyy");
     }
+
+    public string Name
+    {
+        get => name;
+        set { name = value; OnPropertyChanged(nameof(Name)); }
+    }
+
+    public int RealseDate
+    {
+        get => realseDate;
+        set { realseDate = value; OnPropertyChanged(nameof(RealseDate)); }
+    }
+
+    public string UrlImg
+    {
+        get => urlImg;
+        set { urlImg = value; OnPropertyChanged(nameof(UrlImg)); }
+    }
+
+    public string UrlRtf
+    {
+        get => urlRtf;
+        set { urlRtf = value; OnPropertyChanged(nameof(UrlRtf)); }
+    }
+
+    public bool CheckBox
+    {
+        get => checkBox;
+        set { checkBox = value; OnPropertyChanged(nameof(CheckBox)); }
+    }
+
+    public event PropertyChangedEventHandler PropertyChanged;
+
+    protected void OnPropertyChanged(string propertyName) =>
+        PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
 }

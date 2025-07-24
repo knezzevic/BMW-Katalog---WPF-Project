@@ -31,3 +31,8 @@ D:\BMW Katalog\BMW-Katalog---WPF-Project\BMW Katalog\obj\Debug\net8.0-windows\Vi
 D:\BMW Katalog\BMW-Katalog---WPF-Project\BMW Katalog\obj\Debug\net8.0-windows\View\Pages\DataGridPage.baml
 D:\BMW Katalog\BMW-Katalog---WPF-Project\BMW Katalog\obj\Debug\net8.0-windows\View\Pages\AddPage.g.cs
 D:\BMW Katalog\BMW-Katalog---WPF-Project\BMW Katalog\obj\Debug\net8.0-windows\View\Pages\AddPage.baml
+D:\BMW Katalog\BMW-Katalog---WPF-Project\BMW Katalog\obj\Debug\net8.0-windows\View\Preview.g.cs
+D:\BMW Katalog\BMW-Katalog---WPF-Project\BMW Katalog\obj\Debug\net8.0-windows\View\Preview.baml
+D:\BMW Katalog\BMW-Katalog---WPF-Project\BMW Katalog\obj\Debug\net8.0-windows\View\Pages\EditPage.g.cs
+D:\BMW Katalog\BMW-Katalog---WPF-Project\BMW Katalog\obj\Debug\net8.0-windows\View\Pages\EditPage.baml
+D:\BMW Katalog\BMW-Katalog---WPF-Project\BMW Katalog\bin\Debug\net8.0-windows\Cars.xml

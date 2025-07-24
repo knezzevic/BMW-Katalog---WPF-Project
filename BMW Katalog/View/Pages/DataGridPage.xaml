@@ -22,23 +22,23 @@
                     </Style>
                 </DataGrid.ColumnHeaderStyle>
                 <DataGrid.Columns>
-                    <DataGridHyperlinkColumn Header="Name" Binding="{Binding Name}">
-                        <DataGridHyperlinkColumn.ElementStyle>
-                            <Style TargetType="TextBlock">
-                                <Setter Property="HorizontalAlignment" Value="Center"/>
-                                <Setter Property="TextAlignment" Value="Center"/>
-                                <Setter Property="FontSize" Value="20"/>
-                                <Setter Property="Margin" Value="10"/>
-                                <Setter Property="FontFamily" Value="Montseratt"/>
-                            </Style>
-                        </DataGridHyperlinkColumn.ElementStyle>
-                    </DataGridHyperlinkColumn>
+                    <DataGridTemplateColumn Header="Name" IsReadOnly="True">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock>
+                                           <Hyperlink Click="Hyperlink_Click" Tag="{Binding}">
+                                               <Run Text="{Binding Name}"/>
+                                           </Hyperlink>
+                                </TextBlock>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
                     <DataGridTextColumn Header="Realse Date" Binding="{Binding RealseDate}" FontSize="20">
                         <DataGridTextColumn.ElementStyle>
                             <Style TargetType="TextBlock">
                                 <Setter Property="HorizontalAlignment" Value="Center"/>
                                 <Setter Property="Margin" Value="10"/>
-                                <Setter Property="FontFamily" Value="Montseratt"/>
+                                <Setter Property="FontFamily" Value="Montserrat"/>
                             </Style>
                         </DataGridTextColumn.ElementStyle>
                     </DataGridTextColumn>
@@ -78,14 +78,14 @@
                             <Style TargetType="TextBlock">
                                 <Setter Property="HorizontalAlignment" Value="Center"/>
                                 <Setter Property="Margin" Value="10"/>
-                                <Setter Property="FontFamily" Value="Montseratt"/>
+                                <Setter Property="FontFamily" Value="Montserrat"/>
                             </Style>
                         </DataGridTextColumn.ElementStyle>
                     </DataGridTextColumn>
-                    <DataGridTemplateColumn Header="Select">
+                    <DataGridTemplateColumn Header="Select" IsReadOnly="False">
                         <DataGridTemplateColumn.CellTemplate>
                             <DataTemplate>
-                                <CheckBox IsChecked="{Binding CheckBox, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+                                <CheckBox IsChecked="{Binding CheckBox, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Click="CheckBox_Click"/>
                             </DataTemplate>
                         </DataGridTemplateColumn.CellTemplate>
                     </DataGridTemplateColumn>

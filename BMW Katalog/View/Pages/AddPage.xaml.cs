@@ -1,23 +1,19 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Text.RegularExpressions;
-using System.Threading.Tasks;
+using System.Collections.ObjectModel; // Potrebno za ObservableCollection
+using System.ComponentModel; // Potrebno za INotifyPropertyChanged
+using System.IO; // Potrebno za File, Path, Directory
+using System.Linq; 
+using System.Text.RegularExpressions; 
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-using BMW_Katalog.Helpers;
-using BMW_Katalog.Model;
-using Microsoft.Win32;
+using System.Windows.Documents; 
+using System.Windows.Input; 
+using System.Windows.Media; 
+using System.Windows.Media.Imaging; 
+using BMW_Katalog.Helpers; 
+using BMW_Katalog.Model; 
+using BMWKatalog.Helpers;
+using Microsoft.Win32; 
 
 namespace BMW_Katalog.View.Pages
 {
@@ -36,18 +32,22 @@ namespace BMW_Katalog.View.Pages
                 OnPropertyChanged(nameof(ImagePath));
             }
         }
+        private Action _saveCarsCallback;
+        private DataIO serializer = new DataIO();
+        private ObservableCollection<Cars> _mainCarsList;
 
-        DataGridPage _dataGridPage { get; set; }
-        public AddPage()
+        public AddPage(ObservableCollection<Cars> mainCarsList, Action saveCarsCallback)
         {
             InitializeComponent();
-            DataContext = this;
+            _mainCarsList = mainCarsList; 
+            DataContext = this; 
             LoadSystemColors();
-            FontFamilyComboBox.SelectedIndex = 51;
+            _saveCarsCallback = saveCarsCallback;
+            FontFamilyComboBox.SelectedIndex = 51; 
             FontSizeComboBox.SelectedIndex = 2;
             FontColorComboBox.SelectedIndex = 7;
-            _dataGridPage = new DataGridPage();
         }
+
         private void txtImage_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             OpenFileDialog ofd = new OpenFileDialog();
@@ -57,7 +57,6 @@ namespace BMW_Katalog.View.Pages
                 ImagePath = ofd.FileName;
             }
         }
-
         public event PropertyChangedEventHandler PropertyChanged;
         protected void OnPropertyChanged(string name) =>
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
@@ -73,7 +72,6 @@ namespace BMW_Katalog.View.Pages
         {
             if (FontFamilyComboBox.SelectedItem != null && !EditorRichTextBox.Selection.IsEmpty)
             {
-
                 EditorRichTextBox.Selection.ApplyPropertyValue(Inline.FontFamilyProperty, FontFamilyComboBox.SelectedItem);
             }
         }
@@ -83,9 +81,7 @@ namespace BMW_Katalog.View.Pages
             if (FontSizeComboBox.SelectedItem != null && !EditorRichTextBox.Selection.IsEmpty)
             {
                 ComboBoxItem selectedItem = FontSizeComboBox.SelectedItem as ComboBoxItem;
-
                 if (selectedItem != null && double.TryParse(selectedItem.Content.ToString(), out double size))
-
                     EditorRichTextBox.Selection.ApplyPropertyValue(TextElement.FontSizeProperty, size);
             }
         }
@@ -105,11 +101,22 @@ namespace BMW_Katalog.View.Pages
             FontFamilyComboBox.SelectedItem = fontFamily;
 
             object fontSize = EditorRichTextBox.Selection.GetPropertyValue(TextElement.FontSizeProperty);
-            FontSizeComboBox.SelectedItem = fontSize;
+
+            if (fontSize != DependencyProperty.UnsetValue)
+            {
+                foreach (ComboBoxItem item in FontSizeComboBox.Items)
+                {
+                    if (item.Content.ToString() == fontSize.ToString())
+                    {
+                        FontSizeComboBox.SelectedItem = item;
+                        break;
+                    }
+                }
+            }
+
 
             object fontColor = EditorRichTextBox.Selection.GetPropertyValue(TextElement.ForegroundProperty);
             FontColorComboBox.SelectedItem = fontColor;
-
         }
 
         private void EditorRichTextBox_TextChanged(object sender, TextChangedEventArgs e)
@@ -124,74 +131,98 @@ namespace BMW_Katalog.View.Pages
             if (FontColorComboBox.SelectedItem != null)
             {
                 Brush brush = (Brush)FontColorComboBox.SelectedItem;
-
                 if (!EditorRichTextBox.Selection.IsEmpty)
                 {
-
                     EditorRichTextBox.Selection.ApplyPropertyValue(TextElement.ForegroundProperty, brush);
                 }
             }
         }
 
-        public Cars data()
+        private bool ProcessAndAddCarData()
         {
-            bool temp = false;
-            Cars car = null;
-
-            if (txtName.Text == string.Empty)
+            // Validacija polja
+            if (string.IsNullOrWhiteSpace(txtName.Text))
             {
-                temp = true;
-                MessageBox.Show("Prazno polje");
+                MessageBox.Show("Molimo unesite naziv automobila.", "Upozorenje", MessageBoxButton.OK, MessageBoxImage.Warning);
+                return false;
             }
-
-            if (txtImage.Text == string.Empty)
+            if (string.IsNullOrWhiteSpace(txtYear.Text) || !int.TryParse(txtYear.Text, out int year))
             {
-                temp = true;
-                MessageBox.Show("Prazno polje");
+                MessageBox.Show("Molimo unesite ispravnu godinu izdanja.", "Upozorenje", MessageBoxButton.OK, MessageBoxImage.Warning);
+                return false;
             }
-
-            if (txtYear.Text == string.Empty)
+            if (string.IsNullOrWhiteSpace(ImagePath)) 
             {
-                temp = true;
-                MessageBox.Show("Prazno polje");
-            }
-
-            if (!int.TryParse(txtYear.Text, out _))
-            {
-                MessageBox.Show("Nije broj");
+                MessageBox.Show("Molimo odaberite sliku automobila.", "Upozorenje", MessageBoxButton.OK, MessageBoxImage.Warning);
+                return false;
             }
 
             TextRange range = new TextRange(EditorRichTextBox.Document.ContentStart, EditorRichTextBox.Document.ContentEnd);
-
             if (string.IsNullOrEmpty(range.Text.ToString().Trim()))
             {
-                MessageBox.Show("Prazno polje");
-                temp = true;
+                MessageBox.Show("Niste nista uneli za opis!", "Upozorenje", MessageBoxButton.OK, MessageBoxImage.Warning);
+                return false;
             }
 
-            if (!temp)
+            string rtfFolderPath = @"../../../RTFs/";
+
+            string sanitizedCarName = XMLHelper.SanitizeFileName(txtName.Text); 
+            string newRtfFileName = $"{sanitizedCarName}.rtf";
+            string fullNewRtfPath = Path.Combine(rtfFolderPath, newRtfFileName);
+            string relativeRtfPathToSave = Path.Combine(rtfFolderPath, newRtfFileName); 
+ 
+            if (_mainCarsList.Any(c => c.Name.Equals(txtName.Text, StringComparison.OrdinalIgnoreCase)))
             {
-                string path = $"D:\\BMW Katalog\\BMW-Katalog---WPF-Project\\BMW Katalog\\RTFs\\{txtName.Text}.rtf";
+                MessageBox.Show("Automobil sa istim imenom već postoji! Molimo izaberite drugo ime.", "Greška pri dodavanju", MessageBoxButton.OK, MessageBoxImage.Error);
+                return false;
+            }
 
-                if (!File.Exists(path))
+            try
+            {
+                using (FileStream fs = new FileStream(fullNewRtfPath, FileMode.Create))
                 {
-                    using (FileStream fs = new FileStream(path, FileMode.Create))
-                    {
-                        range.Save(fs, DataFormats.Rtf);
-                    }
-
-                    car = new Cars(txtName.Text, Convert.ToInt32(txtYear.Text), txtImage.Text, path);
-                    XMLHelper.DodajAuto(car);
+                    range.Save(fs, DataFormats.Rtf);
                 }
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Greška prilikom čuvanja RTF fajla: {ex.Message}", "Greška", MessageBoxButton.OK, MessageBoxImage.Error);
+                return false;
+            }
+
             
-            return car;
+
+            Cars newCar = new Cars
+            {
+                Name = txtName.Text,
+                RealseDate = year, 
+                UrlImg = txtImage.Text, 
+                UrlRtf = relativeRtfPathToSave, 
+                Date = DateTime.Now.ToString("dd.MM.yyyy") 
+            };
+
+            _mainCarsList.Add(newCar);
+
+            MessageBox.Show("Automobil je uspešno dodat!", "Uspeh", MessageBoxButton.OK, MessageBoxImage.Information);
+            return true; 
         }
 
         private void btnSubmit_Click(object sender, RoutedEventArgs e)
         {
-            data();
-            this.NavigationService.Navigate(new DataGridPage());
+            if (ProcessAndAddCarData()) 
+            {
+                serializer.SerializeObject(_mainCarsList, @"../../../Cars.xml");
+                txtName.Text = string.Empty;
+                txtYear.Text = string.Empty;
+                ImagePath = string.Empty; 
+                EditorRichTextBox.Document.Blocks.Clear();
+                WordCountTextBlock.Text = string.Empty;
+
+                if (NavigationService.CanGoBack)
+                    NavigationService.GoBack();
+                else
+                    NavigationService.Navigate(new DataGridPage(_mainCarsList)); 
+            }
         }
     }
 }

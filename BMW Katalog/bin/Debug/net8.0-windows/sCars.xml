@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfCars xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Cars>
+    <Date>24.07.2025</Date>
+    <Name>BMW 320d</Name>
+    <RealseDate>2002</RealseDate>
+    <UrlImg>D:\BMW Katalog\BMW-Katalog---WPF-Project\BMW Katalog\Assets\bmw320d.jpg</UrlImg>
+    <UrlRtf>D:\BMW Katalog\BMW-Katalog---WPF-Project\BMW Katalog\RTFs\BMW_320d.rtf</UrlRtf>
+    <CheckBox>false</CheckBox>
+  </Cars>
+  <Cars>
+    <Date>24.07.2025</Date>
+    <Name>BMW 340i</Name>
+    <RealseDate>2020</RealseDate>
+    <UrlImg>D:\BMW Katalog\BMW-Katalog---WPF-Project\BMW Katalog\Assets\bmw340i.jpg</UrlImg>
+    <UrlRtf>D:\BMW Katalog\BMW-Katalog---WPF-Project\BMW Katalog\RTFs\BMW_340i.rtf</UrlRtf>
+    <CheckBox>false</CheckBox>
+  </Cars>
+  <Cars>
+    <Date>24.07.2025</Date>
+    <Name>BMW X6</Name>
+    <RealseDate>2024</RealseDate>
+    <UrlImg>D:\BMW Katalog\BMW-Katalog---WPF-Project\BMW Katalog\Assets\bmwx6.jpg</UrlImg>
+    <UrlRtf>RTFs/BMW_X6.rtf</UrlRtf>
+    <CheckBox>false</CheckBox>
+  </Cars>
+</ArrayOfCars>

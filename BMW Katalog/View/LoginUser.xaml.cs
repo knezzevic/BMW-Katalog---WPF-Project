@@ -11,7 +11,9 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using BMW_Katalog.Helpers;
 using BMW_Katalog.Model;
+using MaterialDesignThemes.Wpf;
 
 namespace BMW_Katalog.View
 {
@@ -36,44 +38,7 @@ namespace BMW_Katalog.View
 
         private void btnLogin_Click(object sender, RoutedEventArgs e)
         {
-            string username = txtUsername.Text.Trim();
-            string password = txtPassword.Password.Trim();
-
-            var users = UserRepository.LoadUsers();
-            var matchedUser = users.FirstOrDefault(u => u.Username == username && u.Password == password);
-
-            if (matchedUser != null)
-            {
-                if (matchedUser.Role == UserRole.Admin)
-                {
-                    User user = new User
-                    {
-                        Username = username,
-                        Password = password
-                    };
-
-                    MainWindow mw = new MainWindow(user);
-                    mw.Show();
-                    this.Close();
-
-                }
-                else if (matchedUser.Role == UserRole.Visitor)
-                {
-                    User user = new User
-                    {
-                        Username = username,
-                        Password = password
-                    };
-
-                    MainWindow mw = new MainWindow(user);
-                    mw.Show();
-                    this.Close();
-                }
-                else
-                {
-                    MessageBox.Show("Pogrešno korisničko ime ili lozinka.", "Greška", MessageBoxButton.OK, MessageBoxImage.Error);
-                }
-            }
+            Login();
         }
 
         private void btnClose_Click(object sender, RoutedEventArgs e)
@@ -94,6 +59,12 @@ namespace BMW_Katalog.View
             string username = txtUsername.Text.Trim();
             string password = txtPassword.Password.Trim();
 
+            if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
+            {
+                MessageBox.Show("Unesite korisničko ime i lozinku!","Upozorenje", MessageBoxButton.OK, MessageBoxImage.Warning);
+                return;
+            }
+
             var users = UserRepository.LoadUsers();
             var matchedUser = users.FirstOrDefault(u => u.Username == username && u.Password == password);
 
@@ -126,9 +97,16 @@ namespace BMW_Katalog.View
                 }
                 else
                 {
-                    MessageBox.Show("Pogrešno korisničko ime ili lozinka.", "Greška", MessageBoxButton.OK, MessageBoxImage.Error);
+                    MessageBox.Show("Greska! Nije dobar unos lozinke ili korisnickog imena!", "Greska", MessageBoxButton.OK);
+                    return;
                 }
+            }
+            else
+            {
+                MessageBox.Show("Uneta pogresna lozinka ili korisnicko ime!", "Greska", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
             }
         }
     }
+    
 }

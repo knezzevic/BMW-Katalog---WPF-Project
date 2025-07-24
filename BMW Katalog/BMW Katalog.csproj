@@ -10,11 +10,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Assets\bg.jpg" />
+    <None Remove="Assets\bmw320d.jpg" />
+    <None Remove="Assets\bmw340i.jpg" />
+    <None Remove="Assets\bmwx6.jpg" />
     <None Remove="Assets\filip.jpeg" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="RTFs\" />
+    <None Remove="Assets\logo.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -22,7 +23,22 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Assets\bg.jpg" />
+    <Resource Include="Assets\bmw320d.jpg" />
+    <Resource Include="Assets\bmw340i.jpg" />
+    <Resource Include="Assets\bmwx6.jpg" />
     <Resource Include="Assets\filip.jpeg" />
+    <Resource Include="Assets\logo.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Cars.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="RTFs\" />
   </ItemGroup>
 
 </Project>

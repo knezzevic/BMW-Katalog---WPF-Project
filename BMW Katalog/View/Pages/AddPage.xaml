@@ -13,7 +13,7 @@
         
         <Border CornerRadius="15" BorderThickness="1" BorderBrush="Black" ClipToBounds="True" Background="Black" Margin="20">
             <StackPanel HorizontalAlignment="Center" Margin="40">
-                <TextBlock Text="Dodavanje Automobila" Foreground="White" HorizontalAlignment="Center" FontFamily="Montseratt" FontSize="42" FontWeight="SemiBold"/>
+                <TextBlock Text="Dodavanje Automobila" Foreground="White" HorizontalAlignment="Center" FontFamily="Montserrat" FontSize="42" FontWeight="SemiBold"/>
             </StackPanel>
         </Border>
         <Border CornerRadius="15" BorderThickness="1" BorderBrush="Black" ClipToBounds="True" Background="Transparent" Margin="20">
@@ -31,7 +31,7 @@
                 </Grid.RowDefinitions>
 
                 <StackPanel Grid.Column="0" Grid.Row="1" Margin="20" HorizontalAlignment="Center">
-                    <TextBlock Text="Unesi ime automobila:" Foreground="White" FontFamily="Montseratt" FontSize="20" Margin="0 0 0 5"/>
+                    <TextBlock Text="Unesi ime automobila:" Foreground="White" FontFamily="Montserrat" FontSize="18" Margin="0 0 0 5"/>
                     <TextBox Height="35" Width="250" HorizontalAlignment="Left" BorderThickness="2" Foreground="white" Style="{x:Null}" Background="Transparent" CaretBrush="#0066B1" FontSize="20" Margin="0 0 0 5"  x:Name="txtName">
                         <TextBox.BorderBrush>
                             <LinearGradientBrush StartPoint="0, 0" EndPoint="1, 1">
@@ -44,7 +44,7 @@
                 </StackPanel>
 
                 <StackPanel Grid.Column="0" Grid.Row="2" Margin="10" HorizontalAlignment="Center">
-                    <TextBlock Text="Unesi sliku automobila:" Foreground="White" FontFamily="Montseratt" FontSize="20" Margin="0 0 0 5"/>
+                    <TextBlock Text="Unesi sliku automobila:" Foreground="White" FontFamily="Montserrat" FontSize="18" Margin="0 0 0 5"/>
                     <TextBox Height="35" Width="250" HorizontalAlignment="Left" BorderThickness="2" Foreground="white" Style="{x:Null}" Background="Transparent" CaretBrush="#0066B1" FontSize="20" Margin="0 0 0 5"  x:Name="txtImage" Text="{Binding ImagePath, UpdateSourceTrigger=PropertyChanged}" IsReadOnly="True" PreviewMouseLeftButtonDown="txtImage_PreviewMouseLeftButtonDown">
                         <TextBox.BorderBrush>
                             <LinearGradientBrush StartPoint="0, 0" EndPoint="1, 1">
@@ -57,7 +57,7 @@
                 </StackPanel>
 
                 <StackPanel Grid.Column="1" Grid.Row="1" Margin="20" HorizontalAlignment="Center">
-                    <TextBlock Text="Unesi godinu proizvodnje:" Foreground="White" FontFamily="Montseratt" FontSize="20" Margin="0 0 0 5"/>
+                    <TextBlock Text="Unesi godinu proizvodnje:" Foreground="White" FontFamily="Montserrat" FontSize="18" Margin="0 0 0 5"/>
                     <TextBox Height="35" Width="250" HorizontalAlignment="Left" BorderThickness="2" Foreground="white" Style="{x:Null}" Background="Transparent" CaretBrush="#0066B1" FontSize="20" Margin="0 0 0 5"  x:Name="txtYear">
                         <TextBox.BorderBrush>
                             <LinearGradientBrush StartPoint="0, 0" EndPoint="1, 1">
@@ -168,12 +168,12 @@
                         Height="100"
                         Margin="0 10 0 00"
                         SelectionChanged="EditorRichTextBox_SelectionChanged" 
-                        TextChanged="EditorRichTextBox_TextChanged" Foreground="White" />
+                        TextChanged="EditorRichTextBox_TextChanged" Foreground="White" Style="{x:Null}" Background="Transparent" CaretBrush="White"/>
 
                     
                 </DockPanel>
                 <StackPanel Grid.Column="0" Grid.Row="3" VerticalAlignment="Bottom" HorizontalAlignment="Center" Grid.ColumnSpan="2">
-                    <Button Width="170" Height="60" Content="Submit" Style="{StaticResource MaterialDesignRaisedButton}"
+                    <Button Width="170" Height="60" Content="Submit" Style="{StaticResource MaterialDesignRaisedButton}" FontFamily="Montserrat"
                             materialDesign:ButtonAssist.CornerRadius="20" BorderBrush="Transparent" Foreground="White" x:Name="btnSubmit" Click="btnSubmit_Click" FontSize="20" Margin="0 0 0 20" >
                         <Button.Background>
                             <LinearGradientBrush StartPoint="0, 0" EndPoint="1, 1">

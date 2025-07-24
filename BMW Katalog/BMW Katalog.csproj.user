@@ -16,6 +16,9 @@
     <Compile Update="View\Pages\DataGridPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="View\Pages\EditPage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="View\Preview.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -31,6 +34,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="View\Pages\DataGridPage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\Pages\EditPage.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="View\Preview.xaml">
